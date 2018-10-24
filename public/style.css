@@ -19,3 +19,29 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+.blueG {
+  background: linear-gradient(45deg, lightblue 30%, lightcyan);
+}
+.forceR {
+  left: 200;
+}
+.linkB {
+  color: azure;
+  right: 1%;
+}
+.logForm {
+  color: azure;
+  float: center;
+}
+.cuteLink {
+  color: lightblue;
+  float: center;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-decoration-color: black;
+
+  transform: translate(-90%, -90%);
+}
