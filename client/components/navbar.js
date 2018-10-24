@@ -10,7 +10,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
 import Button from '@material-ui/core/Button'
-// import MenuIcon from '@material-ui/core/icon/menu'
+import MenuIcon from '@material-ui/icons/menu'
 import {AccountCircle} from '@material-ui/core/icon/'
 import Switch from '@material-ui/core/Switch'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
@@ -81,76 +81,34 @@ class Navbar extends React.Component {
     const open = Boolean(anchorEl)
 
     return (
-      <div width="300%">
+      <div width="300px" height="600px">
         <AppBar position="relative">
-          <Toolbar className="blueG">
+          <Toolbar className="blueG" disableGutters={!open}>
             <IconButton
-              color="inherit"
+              color="black"
               onClick={this.onButtonClick}
               aria-label="menu"
               firstchild="true"
-              size="large"
               float="left"
             >
+              <MenuIcon color="black" />
               {this.state.showComponent ? <Main /> : null}
             </IconButton>
             <Typography
-              variant="display3"
-              color="inherit"
+              // variant="display3"
+              color="black"
               centered="true"
               style={{
+                color: 'black',
+                fontSize: 40,
                 float: 'none',
-                width: '200px',
+                width: '300px',
                 marginLeft: 'auto',
                 marginRight: 'auto'
               }}
             >
-              BookMarker
+              Matthew Nesvet
             </Typography>
-            <Divider />
-
-            <div>
-              <IconButton
-                aria-owns={open ? 'menu-appbar' : null}
-                aria-haspopup="true"
-                onClick={this.handleMenu}
-                color="primary"
-              >
-                {/* <AccountCircle color="primary" /> */}
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right'
-                }}
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right'
-                }}
-                open={open}
-                onClose={this.handleClose}
-                color="primary"
-              >
-                <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-                <MenuItem onClick={this.handleClose}>My account</MenuItem>
-              </Menu>
-              {/* <FormGroup color="primary">
-                <FormControlLabel
-                  control={
-                    <Switch
-                      checked={auth}
-                      onChange={this.handleChange}
-                      aria-label="LoginSwitch"
-                      color="primary"
-                    />
-                  }
-                  label={auth ? 'Logout' : 'Login'}
-                  color="primary"
-                />
-              </FormGroup> */}
-            </div>
           </Toolbar>
         </AppBar>
       </div>

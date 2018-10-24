@@ -28,7 +28,7 @@ class Home extends React.Component {
       <Card
         style={{
           float: 'none',
-          width: '55%',
+          width: '40%',
           marginLeft: 'auto',
           marginRight: 'auto'
         }}
@@ -38,14 +38,14 @@ class Home extends React.Component {
         </Typography>
         <CardMedia
           component="img"
-          height="50%"
+          height="40%"
           image="https://cdn130.picsart.com/276489106018201.jpg?c480x480"
           title="Contemplative Reptile"
           fullwidth="true"
         />
-        <CardContent>
-          <Typography variant="display3">
-            Because girl, your kindle is ON FI-YA!
+        <CardContent align="center">
+          <Typography variant="display3" centered>
+            Yeah... you are in for it!
           </Typography>
         </CardContent>
       </Card>
