@@ -1,7 +1,6 @@
-/* body {
-  font-family: sans-serif;
+* body {
+  display: block;
 }
-
 a {
   text-decoration: none;
 }
@@ -18,8 +17,8 @@ nav a {
 form div {
   margin: 1em;
   display: inline-block;
-} */
-.blueG {
+}
+/* .blueG {
   background: linear-gradient(45deg, lightblue 30%, lightcyan);
 }
 .forceR {
@@ -43,4 +42,4 @@ form div {
   left: 50%;
   text-decoration-color: black;
   transform: translate(-90%, -90%);
-}
+} */
