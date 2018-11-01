@@ -53,7 +53,7 @@ class Footer extends React.Component {
             // background: 'linear-gradient(45deg, #98FB98 30%, #87CEFA 90%)'
             top: 'auto',
             bottom: 0,
-            background: 'lightGrey',
+            background: 'whiteSmoke',
             // display: 'flex',
             // flexDirection: 'column',
             marginLeft: 'auto',
@@ -69,6 +69,7 @@ class Footer extends React.Component {
               style={{
                 color: 'black',
                 fontSize: 25,
+                fontFamily: 'Chakra Petch',
 
                 marginLeft: '25%'
                 // marginRight: 'auto'
@@ -82,7 +83,8 @@ class Footer extends React.Component {
                 color: 'black',
                 width: '8%',
                 marginLeft: 10,
-                marginRight: 10
+                marginRight: 10,
+                fontFamily: 'Chakra Petch'
               }}
             >
               <a target="_blank" href="https://www.Twitter.com/MattNesvet">
@@ -95,7 +97,8 @@ class Footer extends React.Component {
                 color: 'black',
                 width: '8%',
                 marginLeft: 10,
-                marginRight: 10
+                marginRight: 10,
+                fontFamily: 'Chakra Petch'
               }}
             >
               <a target="_blank" href="https://www.Facebook.com/nesvet">
@@ -108,7 +111,8 @@ class Footer extends React.Component {
                 color: 'black',
                 width: '8%',
                 marginLeft: 10,
-                marginRight: 10
+                marginRight: 10,
+                fontFamily: 'Chakra Petch'
               }}
             >
               <a target="_blank" href="https://www.Academia.edu/Nesvet">
@@ -121,7 +125,8 @@ class Footer extends React.Component {
                 color: 'black',
                 width: '8%',
                 marginLeft: 10,
-                marginRight: 10
+                marginRight: 10,
+                fontFamily: 'Chakra Petch'
               }}
             >
               <a target="_blank" href="https://www.Linkedin.com/in/nesvet">
@@ -134,7 +139,8 @@ class Footer extends React.Component {
                 color: 'black',
                 width: '8%',
                 marginLeft: 10,
-                marginRight: 10
+                marginRight: 10,
+                fontFamily: 'Chakra Petch'
               }}
             >
               <a target="_blank" href="https://www.instagram.com">

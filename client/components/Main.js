@@ -47,10 +47,28 @@ class Main extends React.Component {
           <Toolbar disableGutters={!open} height={'20%'}>
             <Button
               variant="outlined"
-              style={{color: 'black', marginLeft: 20, width: '10%'}}
+              style={{
+                color: 'black',
+                fontFamily: 'Chakra Petch',
+                marginLeft: 20,
+                width: '10%'
+              }}
             >
               About
               {/* <ContactMailOutlinedIcon style={{marginLeft: 3}} /> */}
+            </Button>
+
+            <Button
+              variant="outlined"
+              style={{
+                color: 'black',
+                fontFamily: 'Chakra Petch',
+                marginLeft: 20,
+                width: '10%'
+              }}
+            >
+              Contact
+              {/* <ContactMailOutlinedIcon style={{marginRight: 3}} /> */}
             </Button>
             <Typography
               // variant="display3"
@@ -61,19 +79,14 @@ class Main extends React.Component {
                 fontSize: 40,
                 float: 'none',
                 width: '300px',
-                marginLeft: 'auto',
-                marginRight: 'auto'
+                fontFamily: 'Chakra Petch',
+
+                marginLeft: '25%'
+                // marginRight: 'auto'
               }}
             >
               Matthew Nesvet
             </Typography>
-            <Button
-              variant="outlined"
-              style={{color: 'black', marginRight: 20, width: '10%'}}
-            >
-              Contact
-              {/* <ContactMailOutlinedIcon style={{marginRight: 3}} /> */}
-            </Button>
           </Toolbar>
         </AppBar>
         {/* <Footer /> */}

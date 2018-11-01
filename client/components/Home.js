@@ -19,8 +19,8 @@ const styles = theme => ({
     minWidth: 300,
     height: '100%',
     width: '100%',
-    backgroundColor: 'whiteSmoke',
-    marginTop: 40
+    backgroundColor: 'white',
+    marginTop: 30
   },
   image: {
     position: 'relative',
@@ -94,23 +94,23 @@ const images = [
     // url: 'https://cdn140.picsart.com/277629997011201.jpg?c480x480',
     url: 'https://cdn131.picsart.com/276015008018201.jpg?c480x480',
     title: 'Recent Work A',
-    width: 300,
-    height: 300
+    width: 250,
+    height: 250
   },
   {
     // url: 'https://cdn140.picsart.com/276254674027201.jpg?c480x480',
     url: 'https://cdn130.picsart.com/270773248020201.jpg?c480x480',
     title: 'Recent Work B',
     // width: '45%',
-    width: 300,
-    height: 300
+    width: 250,
+    height: 250
   },
   {
     url: 'https://cdn140.picsart.com/272129255019201.jpg?c480x480',
     title: 'Podcasts',
     // width: '45%',
-    width: 300,
-    height: 300
+    width: 250,
+    height: 250
   }
   // {
   //   // url: 'https://cdn140.picsart.com/277629997011201.jpg?c480x480',
@@ -143,10 +143,11 @@ function Home(props) {
           style={{
             // width: image.width,
             // height: image.height,
-            width: '30%',
+            // width: '30%',
+            width: '55%',
             height: 300,
-            marginTop: 40,
-            marginBottom: 10,
+            marginTop: '5%',
+            // marginBottom: 10,
             marginLeft: 20,
             marginRight: 20
           }}
@@ -180,7 +181,7 @@ function Home(props) {
         focusVisibleClassName={classes.focusVisible}
         style={{
           width: '50%',
-          marginTop: 60,
+          marginTop: '5%',
           marginBottom: 60,
           marginLeft: 20,
           marginRight: 20
@@ -200,7 +201,7 @@ function Home(props) {
             color="inherit"
             className={classes.imageTitle}
           >
-            more
+            More
             <span className={classes.imageMarked} />
           </Typography>
         </span>
