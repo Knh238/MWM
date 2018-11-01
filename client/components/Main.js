@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+// import Footer from './Footer'
 
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
@@ -10,27 +11,16 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
-import ChevronRightIcon from '@material-ui/icons/ChevronRight'
-import InboxIcon from '@material-ui/icons/MoveToInbox'
-import MailIcon from '@material-ui/icons/Mail'
+
 import ContactMailOutlinedIcon from '@material-ui/icons/ContactMailOutlined'
-import Drawer from '@material-ui/core/Drawer'
-import List from '@material-ui/core/List'
-import Divider from '@material-ui/core/Divider'
-import ListItem from '@material-ui/core/ListItem'
 // import CssBaseline from '@material-ui/core/CssBaseline'
 import ButtonBase from '@material-ui/core/ButtonBase'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
+
 import Paper from '@material-ui/core/Paper'
 //font-family: 'Chakra Petch', sans-serif;
 // font-family: 'Bitter', serif;
 // font-family: 'Fahkwang', sans-serif;
 // import Navbar from './Navbar'
-
-const drawerWidth = 240
 
 // const styles = {
 
@@ -45,52 +35,48 @@ class Main extends React.Component {
 
     return (
       <div>
-        <div>
-          {/* <CssBaseline /> */}
-          <AppBar
-            position="fixed"
-            // className={classNames(styles.appBar, {
-            //   [styles.appBarShift]: open
-            // })}
-            style={{
-              // background: 'linear-gradient(45deg, #98FB98 30%, #87CEFA 90%)'
-              background: 'cadetBlue'
-            }}
-          >
-            <Toolbar disableGutters={!open} height={'20%'}>
-              <Button variant="outlined" style={{color: 'black'}}>
-                Contact
-                {/* <ContactMailOutlinedIcon style={{marginLeft: 3}} /> */}
-              </Button>
-              <Typography
-                // variant="display3"
-                color="black"
-                centered="true"
-                style={{
-                  color: 'black',
-                  fontSize: 40,
-                  float: 'none',
-                  width: '300px',
-                  marginLeft: 'auto',
-                  marginRight: 'auto'
-                }}
-              >
-                Matthew Nesvet
-              </Typography>
-              <Button variant="outlined" style={{color: 'black'}}>
-                About
-                {/* <ContactMailOutlinedIcon style={{marginRight: 3}} /> */}
-              </Button>
-            </Toolbar>
-          </AppBar>
-        </div>
-        <Paper>
-          <a href="Twitter.com/MattNesvet"> twitter </a>
-          <a href="Facebook.com/nesvet">facebook</a>
-          <a href="Academia.edu/Nesvet"> academia.edu </a>
-          <a href="Linkedin.com/in/nesvet"> Linkedin</a>
-          <a href="instagram.com">instagram</a>
-        </Paper>
+        {/* <div> */}
+        {/* <CssBaseline /> */}
+        <AppBar
+          position="fixed"
+          style={{
+            // background: 'linear-gradient(45deg, #98FB98 30%, #87CEFA 90%)'
+            background: 'cadetBlue'
+          }}
+        >
+          <Toolbar disableGutters={!open} height={'20%'}>
+            <Button
+              variant="outlined"
+              style={{color: 'black', marginLeft: 20, width: '10%'}}
+            >
+              About
+              {/* <ContactMailOutlinedIcon style={{marginLeft: 3}} /> */}
+            </Button>
+            <Typography
+              // variant="display3"
+              color="black"
+              centered="true"
+              style={{
+                color: 'black',
+                fontSize: 40,
+                float: 'none',
+                width: '300px',
+                marginLeft: 'auto',
+                marginRight: 'auto'
+              }}
+            >
+              Matthew Nesvet
+            </Typography>
+            <Button
+              variant="outlined"
+              style={{color: 'black', marginRight: 20, width: '10%'}}
+            >
+              Contact
+              {/* <ContactMailOutlinedIcon style={{marginRight: 3}} /> */}
+            </Button>
+          </Toolbar>
+        </AppBar>
+        {/* <Footer /> */}
       </div>
     )
   }

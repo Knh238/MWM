@@ -3,19 +3,19 @@ import PropTypes from 'prop-types'
 import {withStyles} from '@material-ui/core/styles'
 import ButtonBase from '@material-ui/core/ButtonBase'
 import Typography from '@material-ui/core/Typography'
-import Paper from '@material-ui/core/Paper'
-import Card from '@material-ui/core/Card'
-import Footer from './footer'
-import {CardContent} from '@material-ui/core'
+// import Paper from '@material-ui/core/Paper'
+// import Card from '@material-ui/core/Card'
+// import {CardContent} from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 
 const styles = theme => ({
   stuff: {
     display: 'flex',
-    flexDirection: 'column',
+    // flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     flexWrap: 'wrap',
+
     minWidth: 300,
     height: '100%',
     width: '100%',
@@ -91,25 +91,35 @@ const styles = theme => ({
 
 const images = [
   {
-    url: 'https://cdn140.picsart.com/277629997011201.jpg?c480x480',
+    // url: 'https://cdn140.picsart.com/277629997011201.jpg?c480x480',
+    url: 'https://cdn131.picsart.com/276015008018201.jpg?c480x480',
     title: 'Recent Work A',
-    width: '45%'
+    width: 300,
+    height: 300
   },
   {
-    url: 'https://cdn140.picsart.com/276254674027201.jpg?c480x480',
+    // url: 'https://cdn140.picsart.com/276254674027201.jpg?c480x480',
+    url: 'https://cdn130.picsart.com/270773248020201.jpg?c480x480',
     title: 'Recent Work B',
-    width: '45%'
+    // width: '45%',
+    width: 300,
+    height: 300
   },
   {
-    url: 'https://cdn140.picsart.com/276173766036201.jpg?c480x480',
+    url: 'https://cdn140.picsart.com/272129255019201.jpg?c480x480',
     title: 'Podcasts',
-    width: '45%'
-  },
-  {
-    url: 'https://cdn140.picsart.com/277629997011201.jpg?c480x480',
-    title: 'more',
-    width: '33%'
+    // width: '45%',
+    width: 300,
+    height: 300
   }
+  // {
+  //   // url: 'https://cdn140.picsart.com/277629997011201.jpg?c480x480',
+  //   url: 'https://cdn140.picsart.com/269211499020201.jpg?c480x480',
+  //   title: 'more',
+  //   width: '33%'
+  //   // width: 150,
+  //   // height: 200
+  // }
 ]
 
 // class Home extends React.Component {
@@ -121,104 +131,90 @@ function Home(props) {
   const {classes} = props
 
   return (
-    <div>
-      <div className={classes.stuff}>
-        {images.map(image => (
-          <ButtonBase
-            focusRipple
-            key={image.title}
-            className={classes.image}
-            focusVisibleClassName={classes.focusVisible}
+    // <Paper fullheight>
+
+    <div className={classes.stuff}>
+      {images.map(image => (
+        <ButtonBase
+          focusRipple
+          key={image.title}
+          className={classes.image}
+          focusVisibleClassName={classes.focusVisible}
+          style={{
+            // width: image.width,
+            // height: image.height,
+            width: '30%',
+            height: 300,
+            marginTop: 40,
+            marginBottom: 10,
+            marginLeft: 20,
+            marginRight: 20
+          }}
+        >
+          <span
+            className={classes.imageSrc}
             style={{
-              width: image.width,
-              marginTop: 10,
-              marginBottom: 10
+              backgroundImage: `url(${image.url})`
             }}
-          >
-            <span
-              className={classes.imageSrc}
-              style={{
-                backgroundImage: `url(${image.url})`
-              }}
-            />
-            <span className={classes.imageBackdrop} />
-            <span className={classes.imageButton}>
-              <Typography
-                component="span"
-                variant="subtitle1"
-                color="inherit"
-                className={classes.imageTitle}
-              >
-                {image.title}
-                <span className={classes.imageMarked} />
-              </Typography>
-            </span>
-          </ButtonBase>
-        ))}
-      </div>
-      <Card
-        styles={{
-          marginTop: 40,
-          display: 'flex',
-          backgroundColor: 'azure',
-          // alignItems: 'center',
-          // justifyContent: 'center',
-          alignText: 'center'
-          // flexWrap: 'wrap'
+          />
+          <span className={classes.imageBackdrop} />
+          <span className={classes.imageButton}>
+            <Typography
+              component="span"
+              variant="subtitle1"
+              color="inherit"
+              className={classes.imageTitle}
+            >
+              {image.title}
+              <span className={classes.imageMarked} />
+            </Typography>
+          </span>
+        </ButtonBase>
+      ))}
+      {/* </div>
+      <div className={classes.stuff}> */}
+      <ButtonBase
+        focusRipple
+        key="more"
+        className={classes.image}
+        focusVisibleClassName={classes.focusVisible}
+        style={{
+          width: '50%',
+          marginTop: 60,
+          marginBottom: 60,
+          marginLeft: 20,
+          marginRight: 20
         }}
       >
-        <CardContent
+        <span
+          className={classes.imageSrc}
           style={{
-            display: 'flex',
-            flexDirection: 'column',
-            flexWrap: 'wrap',
-            alignContent: 'center',
-            float: 'center',
-            backgroundColor: 'white'
+            backgroundImage: `url(https://cdn140.picsart.com/269211499020201.jpg?c480x480)`
           }}
-          centered
-        >
-          {/* <ul>
-            <li> */}
-          <Button
-          // variant="outlined"
-          // style={{color: 'black', height: 20, width: 50}}
+        />
+        <span className={classes.imageBackdrop} />
+        <span className={classes.imageButton}>
+          <Typography
+            component="span"
+            variant="subtitle1"
+            color="inherit"
+            className={classes.imageTitle}
           >
-            <a target="_blank" href="https://www.Twitter.com/MattNesvet">
-              twitter
-            </a>
-          </Button>
-          <Button>
-            <a target="_blank" href="https://www.Facebook.com/nesvet">
-              facebook
-            </a>
-          </Button>
-          <Button>
-            <a target="_blank" href="https://www.Academia.edu/Nesvet">
-              academia.edu
-            </a>
-          </Button>
-          <Button>
-            <a target="_blank" href="https://www.Linkedin.com/in/nesvet">
-              Linkedin
-            </a>
-          </Button>
-          <Button>
-            <a target="_blank" href="https://www.instagram.com">
-              instagram
-            </a>
-          </Button>
-        </CardContent>
-      </Card>
+            more
+            <span className={classes.imageMarked} />
+          </Typography>
+        </span>
+      </ButtonBase>
     </div>
+
+    // </Paper>
   )
 }
-//}
 
-Home.propTypes = {
+/* Home.propTypes = {
   classes: PropTypes.object.isRequired
-}
+} */
 
 export default withStyles(styles)(Home)
 
-// export default connect(null, null)(Home)
+/* // export default connect(null, null)(Home) */
