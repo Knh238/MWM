@@ -42,6 +42,26 @@ const styles = theme => ({
       }
     }
   },
+  imageC: {
+    position: 'relative',
+    height: 200,
+    [theme.breakpoints.down('xs')]: {
+      width: '100% !important', // Overrides inline-style
+      height: 100
+    },
+    '&:hover, &$focusVisible': {
+      zIndex: 1,
+      '& $imageBackdrop': {
+        opacity: 0.15
+      },
+      '& $imageMarked': {
+        opacity: 0
+      },
+      '& $imageTitle': {
+        border: '4px solid currentColor'
+      }
+    }
+  },
   focusVisible: {},
   imageButton: {
     position: 'absolute',
@@ -62,6 +82,15 @@ const styles = theme => ({
     bottom: 0,
     backgroundSize: 'cover',
     backgroundPosition: 'center 40%'
+  },
+  imageSrcC: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center 20%'
   },
   imageBackdrop: {
     position: 'absolute',
@@ -172,8 +201,9 @@ function Home(props) {
           </span>
         </ButtonBase>
       ))}
-      {/* </div>
-      <div className={classes.stuff}> */}
+
+      {/* <div className={classes.stuff}> */}
+
       <ButtonBase
         focusRipple
         key="more"
@@ -206,9 +236,42 @@ function Home(props) {
           </Typography>
         </span>
       </ButtonBase>
-    </div>
 
-    // </Paper>
+      <ButtonBase
+        focusRipple
+        key="more"
+        className={classes.imageC}
+        focusVisibleClassName={classes.focusVisible}
+        style={{
+          width: '20%',
+          marginTop: '5%',
+          marginBottom: 60,
+          marginLeft: 20,
+          marginRight: 20
+        }}
+      >
+        <span
+          className={classes.imageSrcC}
+          style={{
+            backgroundImage: `url(https://cdn140.picsart.com/269211499020201.jpg?c480x480)`,
+            borderRadius: '50%',
+            border: 2
+          }}
+        />
+        <span className={classes.imageBackdrop} />
+        <span className={classes.imageButton}>
+          <Typography
+            component="span"
+            variant="subtitle1"
+            color="inherit"
+            className={classes.imageTitle}
+          >
+            More
+            <span className={classes.imageMarked} />
+          </Typography>
+        </span>
+      </ButtonBase>
+    </div>
   )
 }
 
